@@ -13,6 +13,17 @@
   <p class="flash">
     <%= flash.notice %>
   </p>
+  <div id="navigation">
+    <div>
+      <%= link_to "Home", articles_path %>
+    </div>
+    <div>
+      <%= link_to "Topics", tags_path %>
+    </div>
+    <div>
+      <%= link_to "Sign Up", new_author_path %>
+    </div>
+  </div>
   <div id="container">
     <div id="content">
       <%= yield %>
@@ -20,8 +31,9 @@
       <h6>
         <% if logged_in? %>
           <%= "Logged in as #{current_user.email}" %>
+          <%= link_to "(logout)", logout_path %>
         <% else %>
-          Logged out
+          <%= link_to "(login)", login_path %>
         <% end %>
       </h6>
     </div>

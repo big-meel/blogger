@@ -30,6 +30,12 @@ a {
   margin-top: 20px;
 }
 
+#navigation {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 50px 50px 50px;
+}
+
 #content {
   clear: both;
   padding-top: 20px;
